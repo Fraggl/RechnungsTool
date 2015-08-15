@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RechnungsTool"
         mc:Ignorable="d"
-        Title="MainWindow" Height="357.198" Width="664.46">
+        Title="MainWindow" Height="541.066" Width="564.301">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="23"/>
@@ -28,17 +28,15 @@
             </Menu.Resources>
 
             <!-- Menu -->
-            <MenuItem Header="File" 
+            <MenuItem Header="Datei" 
               ItemContainerStyle="{StaticResource ThemeMenuItemStyle}"  >
-                <MenuItem Header="Open" Margin="0,0,-13,0" />
+                <MenuItem Header="Document generieren" Margin="0,0,-13,0" />
                 <Separator HorizontalAlignment="Left" Width="106"/>
-                <MenuItem x:Name="Menu_1_Sub_Exit" Header="Exit" Click="Menu_1_Sub_Exit_Click"/>
+                <MenuItem x:Name="Menu_1_Sub_Exit" Header="Beenden" Click="Menu_1_Sub_Exit_Click"/>
             </MenuItem>
             <MenuItem Header="Help" ItemsSource="{Binding Themes}" 
               ItemContainerStyle="{StaticResource ThemeMenuItemStyle}"  />
         </Menu>
-
-        <!-- Middle Contentarea -->
 
         <!-- Status-Bar -->
         <StatusBar Grid.Row="2">
@@ -59,8 +57,38 @@
                 <TextBlock Text="RechnungsTool V0.1 15.08.2015" />
             </StatusBarItem>
         </StatusBar>
+
+        <!-- Middle Contentarea -->
         <DataGrid HeadersVisibility="None" Grid.Row="1"/>
-        <Label x:Name="lbl_Billanz_Erg" Content="" Margin="0,10.768,194.298,0" Grid.Row="1" VerticalAlignment="Top" Height="29.559" RenderTransformOrigin="-0.156,0.719" HorizontalAlignment="Right" Width="64.24"/>
+        <DatePicker x:Name="dpick_1" Margin="0,10,40.661,0" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Top" SelectedDateFormat="Short" SelectedDateChanged="dpick_1_SelectedDateChanged"/>
+
+        <Label x:Name="lbl_sender" Content="Absender" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tb_sender_name"  HorizontalAlignment="Left" Height="23" Margin="10,35.96,0,0" Grid.Row="1" TextWrapping="Wrap" Text=" Name" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tb_sender_street" HorizontalAlignment="Left" Height="23" Margin="10,63.96,0,0" Grid.Row="1" TextWrapping="Wrap" Text=" Straße" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tb_sender_zip" HorizontalAlignment="Left" Margin="10,91.96,0,0" Grid.Row="1" TextWrapping="Wrap" Text=" Plz/Stadt" Width="120" Height="23" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_sender_phone" HorizontalAlignment="Left" Height="23" Margin="10,119.96,0,0" Grid.Row="1" TextWrapping="Wrap" Text=" Telefonnr." VerticalAlignment="Top" Width="120"/>
+
+        <Label x:Name="lbl_receiver" Content="Empfänger" HorizontalAlignment="Left" Margin="174,5,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tb_receiver_name" HorizontalAlignment="Left" Height="23" Margin="174,35.96,0,0" Grid.Row="1" TextWrapping="Wrap" Text=" Name" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tb_receiver_street" HorizontalAlignment="Left" Height="23" Margin="174,63.96,0,0" Grid.Row="1" TextWrapping="Wrap" Text=" Straße" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tb_receiver_zip" HorizontalAlignment="Left" Height="23" Margin="174,91.96,0,0" Grid.Row="1" TextWrapping="Wrap" Text=" Plz/Stadt" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tb_receiver_phone" HorizontalAlignment="Left" Height="23" Margin="174,119.96,0,0" Grid.Row="1" TextWrapping="Wrap" Text=" Telefonnr." VerticalAlignment="Top" Width="120"/>
+
+        <Label x:Name="lbl_regard" Content="Rechnung vom" HorizontalAlignment="Left" Margin="10,170,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lbl_datepicked" Content="" Margin="102,171.04,262.301,0" Grid.Row="1" VerticalAlignment="Top"/>
+
+
+        <RichTextBox x:Name="richTextBox" Margin="10,202,262.301,0" Grid.Row="1">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="Sehr geehrte Damen und Herren,
+                         anbei die Rechnung vom XX.XX.XXX                        
+                         Mit freundlichen Grüßen"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+
+
 
     </Grid>
 </Window>

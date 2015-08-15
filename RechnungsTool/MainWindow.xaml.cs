@@ -24,5 +24,27 @@ namespace RechnungsTool
         {
             InitializeComponent();
         }
+
+        private void Menu_1_Sub_Exit_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Schließen?", "Beenden",
+                MessageBoxButton.YesNo,
+                MessageBoxImage.Question,
+                MessageBoxResult.No);
+            if (result == MessageBoxResult.Yes)
+                Application.Current.Shutdown();
+        }
+
+        private void datepicker_writing_ValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dpick_1_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //DateTime result = dpick_1.SelectedDate.Value;
+            //this.Title = result.ToString();
+            lbl_datepicked.Content = dpick_1.SelectedDate.Value.ToShortDateString();
+        }
     }
 }
