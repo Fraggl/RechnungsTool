@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Novacode;
+using System.Diagnostics;
 
 namespace RechnungsTool
 {
@@ -35,9 +37,10 @@ namespace RechnungsTool
                 Application.Current.Shutdown();
         }
 
-        private void datepicker_writing_ValueChanged(object sender, EventArgs e)
+        private void Menu_1_Sub_generate_Click(object sender, RoutedEventArgs e)
         {
-            
+            string test = tb_receiver_name.Text + "" + dpick_1.Text;
+            CreateDocument(test);
         }
 
         private void dpick_1_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
@@ -45,6 +48,19 @@ namespace RechnungsTool
             //DateTime result = dpick_1.SelectedDate.Value;
             //this.Title = result.ToString();
             lbl_datepicked.Content = dpick_1.SelectedDate.Value.ToShortDateString();
+        }
+
+        private void CreateDocument(string test)
+        {
+            string fileName = @"C:\Users\Barney\" + test + ".docx";
+
+            var doc = DocX.Create(fileName);
+
+            doc.InsertParagraph(tb_receiver_name.Text);
+
+            doc.Save();
+
+            Process.Start("WINWORD.EXE", fileName);
         }
     }
 }
