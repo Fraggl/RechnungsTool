@@ -39,8 +39,16 @@ namespace RechnungsTool
 
         private void Menu_1_Sub_generate_Click(object sender, RoutedEventArgs e)
         {
-            string createfilename = tb_receiver_name.Text + "" + dpick_1.Text;
-            CreateDocument(createfilename);
+            if (dpick_1.SelectedDate != null)
+            {
+                string createfilename = tb_receiver_name.Text + "" + dpick_1.Text;
+                CreateDocument(createfilename);
+            }
+            else
+            {
+                MessageBox.Show("Es wurde kein Datum ausgewählt!", "Fehlende Eingabe",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void dpick_1_SelectedDateChanged(object sender, SelectionChangedEventArgs e)

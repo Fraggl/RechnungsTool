@@ -63,7 +63,7 @@
         <DatePicker x:Name="dpick_1" Margin="0,10,40.661,0" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Top" SelectedDateFormat="Short" SelectedDateChanged="dpick_1_SelectedDateChanged"/>
 
         <Label x:Name="lbl_sender" Content="Absender" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tb_sender_name"  HorizontalAlignment="Left" Height="23" Margin="10,35.96,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tb_sender_name"  HorizontalAlignment="Left" Height="23" Margin="10,35.96,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="120"  ToolTip="Namen des Absenders"/>
         <TextBox x:Name="tb_sender_street" HorizontalAlignment="Left" Height="23" Margin="10,63.96,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Straße" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="tb_sender_zip" HorizontalAlignment="Left" Margin="10,91.96,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Plz/Stadt" Width="120" Height="23" VerticalAlignment="Top"/>
         <TextBox x:Name="tb_sender_phone" HorizontalAlignment="Left" Height="23" Margin="10,119.96,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Telefonnr." VerticalAlignment="Top" Width="120"/>
