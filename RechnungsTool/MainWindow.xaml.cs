@@ -39,7 +39,7 @@ namespace RechnungsTool
 
         private void Menu_1_Sub_generate_Click(object sender, RoutedEventArgs e)
         {
-            if (dpick_1.SelectedDate != null)
+            if (dpick_1.SelectedDate.HasValue == true)
             {
                 string createfilename = dpick_1.Text + "_" + tb_receiver_name.Text;
                 createfilename = createfilename.Replace(" ", "");
@@ -54,7 +54,11 @@ namespace RechnungsTool
 
         private void dpick_1_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
-            lbl_datepicked.Content = dpick_1.SelectedDate.Value.ToShortDateString();
+            if (dpick_1.SelectedDate.HasValue == true)
+            {
+                lbl_datepicked.Content = dpick_1.SelectedDate.Value.ToShortDateString();
+            }
+            
         }
 
         private void CreateDocument(string nameforfile)
