@@ -39,28 +39,56 @@ namespace RechnungsTool
 
         private void Menu_1_Sub_generate_Click(object sender, RoutedEventArgs e)
         {
-            string test = tb_receiver_name.Text + "" + dpick_1.Text;
-            CreateDocument(test);
+            string createfilename = tb_receiver_name.Text + "" + dpick_1.Text;
+            CreateDocument(createfilename);
         }
 
         private void dpick_1_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
-            //DateTime result = dpick_1.SelectedDate.Value;
-            //this.Title = result.ToString();
             lbl_datepicked.Content = dpick_1.SelectedDate.Value.ToShortDateString();
         }
 
-        private void CreateDocument(string test)
+        private void CreateDocument(string nameforfile)
         {
-            string fileName = @"C:\Users\Barney\" + test + ".docx";
+            string fileName = @"C:\Users\Barney\" + nameforfile + ".docx";
+
+            string paraTwo = ""
+                + "Sehr geehrte Damen und Herren" + Environment.NewLine + Environment.NewLine
+                + "Dies ist eine Testrechnung."
+                + "Folgende Positionen sind dabei angefallen:"
+                + Environment.NewLine + Environment.NewLine
+                + "Sincerely, "
+                + Environment.NewLine + Environment.NewLine
+                + "Jim Smith, Corporate Hiring Manager";
+
+            // Body Formatting
+            var paraFormat = new Formatting();
+            paraFormat.FontFamily = new System.Drawing.FontFamily("Calibri");
+            paraFormat.Size = 10D;
 
             var doc = DocX.Create(fileName);
 
             doc.InsertParagraph(tb_receiver_name.Text);
+            doc.InsertParagraph(tb_receiver_street.Text);
+            doc.InsertParagraph(tb_receiver_zip.Text);
+            doc.InsertParagraph();
+            doc.InsertParagraph(tb_receiver_phone.Text);
+            doc.InsertParagraph();
+            doc.InsertParagraph(fileName);
+            doc.InsertParagraph(paraTwo, false, paraFormat);
+
+
+
+
 
             doc.Save();
+            MessageBoxResult result = MessageBox.Show("Möchten Sie das erstellte Dokument anzeigen?", "Beenden",
+                MessageBoxButton.YesNo,
+                MessageBoxImage.Question,
+                MessageBoxResult.No);
+            if (result == MessageBoxResult.Yes)
+                Process.Start("WINWORD.EXE", fileName);
 
-            Process.Start("WINWORD.EXE", fileName);
         }
     }
 }
