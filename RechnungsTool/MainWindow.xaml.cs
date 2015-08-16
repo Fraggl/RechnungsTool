@@ -41,7 +41,8 @@ namespace RechnungsTool
         {
             if (dpick_1.SelectedDate != null)
             {
-                string createfilename = tb_receiver_name.Text + "" + dpick_1.Text;
+                string createfilename = dpick_1.Text + "_" + tb_receiver_name.Text;
+                createfilename = createfilename.Replace(" ", "");
                 CreateDocument(createfilename);
             }
             else
@@ -60,14 +61,48 @@ namespace RechnungsTool
         {
             string fileName = @"C:\Users\Barney\" + nameforfile + ".docx";
 
-            string paraTwo = ""
+            string sender = ""
+                + tb_sender_name.Text
+                + Environment.NewLine
+                + tb_sender_street.Text
+                + Environment.NewLine
+                + tb_sender_zip.Text
+                + Environment.NewLine
+                + Environment.NewLine
+                + tb_sender_phone.Text
+                + Environment.NewLine
+                + Environment.NewLine;
+
+            string receiver = ""
+                + tb_receiver_name.Text
+                + Environment.NewLine
+                + tb_receiver_street.Text
+                + Environment.NewLine
+                + tb_receiver_zip.Text
+                + Environment.NewLine
+                + Environment.NewLine
+                + tb_receiver_phone.Text
+                + Environment.NewLine
+                + Environment.NewLine
+                + Environment.NewLine;
+
+            string regard = ""
+                + lbl_regard.Content
+                + " "
+                + dpick_1.SelectedDate.Value.ToShortDateString()
+                + Environment.NewLine
+                + Environment.NewLine;
+
+
+            string bodytext = ""
                 + "Sehr geehrte Damen und Herren" + Environment.NewLine + Environment.NewLine
                 + "Dies ist eine Testrechnung."
+                + Environment.NewLine
                 + "Folgende Positionen sind dabei angefallen:"
                 + Environment.NewLine + Environment.NewLine
-                + "Sincerely, "
+                + "Mit freundlichen Grüßen, "
                 + Environment.NewLine + Environment.NewLine
-                + "Jim Smith, Corporate Hiring Manager";
+                + "Barney Stinson";
 
             // Body Formatting
             var paraFormat = new Formatting();
@@ -76,14 +111,11 @@ namespace RechnungsTool
 
             var doc = DocX.Create(fileName);
 
-            doc.InsertParagraph(tb_receiver_name.Text);
-            doc.InsertParagraph(tb_receiver_street.Text);
-            doc.InsertParagraph(tb_receiver_zip.Text);
-            doc.InsertParagraph();
-            doc.InsertParagraph(tb_receiver_phone.Text);
-            doc.InsertParagraph();
-            doc.InsertParagraph(fileName);
-            doc.InsertParagraph(paraTwo, false, paraFormat);
+
+            doc.InsertParagraph(sender, false, paraFormat);
+            doc.InsertParagraph(receiver, false, paraFormat);
+            doc.InsertParagraph(regard, false, paraFormat);
+            doc.InsertParagraph(bodytext, false, paraFormat);
 
 
 
