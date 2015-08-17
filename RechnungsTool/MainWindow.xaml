@@ -34,6 +34,11 @@
                 <Separator HorizontalAlignment="Left" Width="106"/>
                 <MenuItem x:Name="Menu_1_Sub_Exit" Header="Beenden" Click="Menu_1_Sub_Exit_Click"/>
             </MenuItem>
+            <MenuItem Header="Einstellungen"
+                      ItemContainerStyle="{StaticResource ThemeMenuItemStyle}" >
+                <MenuItem x:Name="Menu_2_Sub_Standarts" Header="Standartwerte" Click="Menu_2_Sub_Standarts_Click" />
+                <MenuItem x:Name="Menu_2_Sub_Save" Header="Speicherort" Click="Menu_2_Sub_Save_Click" /> 
+            </MenuItem>
             <MenuItem Header="Help" ItemsSource="{Binding Themes}" 
               ItemContainerStyle="{StaticResource ThemeMenuItemStyle}"  />
         </Menu>

@@ -52,6 +52,16 @@ namespace RechnungsTool
             }
         }
 
+        private void Menu_2_Sub_Save_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Menu_2_Sub_Standarts_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void dpick_1_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
             if (dpick_1.SelectedDate.HasValue == true)
