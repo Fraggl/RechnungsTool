@@ -95,8 +95,6 @@ namespace RechnungsTool
                 + tb_receiver_zip.Text
                 + Environment.NewLine
                 + Environment.NewLine
-                + tb_receiver_phone.Text
-                + Environment.NewLine
                 + Environment.NewLine
                 + Environment.NewLine;
 
