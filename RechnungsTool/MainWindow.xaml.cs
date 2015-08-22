@@ -59,7 +59,11 @@ namespace RechnungsTool
 
         private void Menu_2_Sub_Standarts_Click(object sender, RoutedEventArgs e)
         {
+            //Window StandardsWindow = new Window();
+            //StandardsWindow.Show();
 
+            var StandardsWindow = new StandardsWindow();
+            StandardsWindow.Show();
         }
 
         private void dpick_1_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
