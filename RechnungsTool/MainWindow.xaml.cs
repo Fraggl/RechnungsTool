@@ -63,7 +63,7 @@ namespace RechnungsTool
             //StandardsWindow.Show();
 
             var StandardsWindow = new StandardsWindow();
-            StandardsWindow.Show();
+            StandardsWindow.ShowDialog();
         }
 
         private void dpick_1_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
