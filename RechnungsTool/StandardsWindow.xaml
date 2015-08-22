@@ -5,14 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RechnungsTool"
         mc:Ignorable="d"
-        Title="StandardsWindow" Height="240.21" Width="245.979">
-    <Grid>
-        <DataGrid x:Name="dataGrid"/>
-        <Label x:Name="label" Content="Absender:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox" Height="23" Margin="10,35.96,107.979,0" TextWrapping="Wrap" Text="Inge Reuter" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox1" Height="23" Margin="10,63.96,107.979,0" TextWrapping="Wrap" Text="Schackstr 4a" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox2" Margin="10,91.96,107.979,94.25" TextWrapping="Wrap" Text="29221 Celle"/>
-        <TextBox x:Name="textBox3" Height="23" Margin="10,0,107.979,66.25" TextWrapping="Wrap" Text="01234 56789" VerticalAlignment="Bottom"/>
+        Title="StandardsWindow" Height="355.543" Width="495.312">
 
+    <Grid>
+        <DataGrid x:Name="dataGrid" HeadersVisibility="None"/>
+        
+        <Label x:Name="label" Content="Sender" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="93.623"/>     
+        <TextBox x:Name="tb_standards_sender_name" HorizontalAlignment="Left" Height="23" Margin="10,40.96,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tb_standards_sender_street" HorizontalAlignment="Left" Height="23" Margin="10,69.383,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tb_standards_sender_zip" HorizontalAlignment="Left" Margin="10,99.05,0,0" TextWrapping="Wrap" Text="TextBox" Width="120" Height="23" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_standards_sender_phone" HorizontalAlignment="Left" Height="23" Margin="10,127.05,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+       
+        <Label x:Name="label_Copy" Content="Empfänger" Margin="152.667,10,241.022,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_standards_receiver_name" Height="51.423" Margin="152.667,40.96,214.645,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_standards_receiver_street" Height="23" Margin="152.667,99.05,214.645,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_standards_receiver_zip" Height="23" Margin="152.667,127.05,214.645,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
     </Grid>
+
 </Window>
