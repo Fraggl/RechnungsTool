@@ -24,8 +24,8 @@
         <TextBox x:Name="tb_standards_receiver_zip" Margin="158.667,149.05,208.645,0" TextWrapping="Wrap" Text="TextBox" Height="23" VerticalAlignment="Top"/>
         <Border BorderBrush="#FF939393" BorderThickness="1" Height="1" Margin="10,0,202.646,173.543" VerticalAlignment="Bottom"/>
         <Label x:Name="label1" Content="Speicherort" HorizontalAlignment="Left" Margin="10,0,0,128.583" VerticalAlignment="Bottom" Width="99.623"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="16,0,0,105.583" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Bottom" Width="197.667"/>
-        <Button x:Name="btn_standards_openFileDialog" Content="Open" Margin="218.667,0,208.645,105.583" VerticalAlignment="Bottom" Height="23"/>
+        <TextBox x:Name="txtbox_standards_openFilePath" HorizontalAlignment="Left" Height="23" Margin="16,0,0,105.583" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Bottom" Width="197.667"/>
+        <Button x:Name="btn_standards_openFileDialog" Content="Open" Margin="218.667,0,208.645,105.583" VerticalAlignment="Bottom" Height="23" Click="Standards_Speicherort_FileDialog_Click"/>
     </Grid>
 
 </Window>
