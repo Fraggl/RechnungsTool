@@ -5,21 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RechnungsTool"
         mc:Ignorable="d"
-        Title="StandardsWindow" Height="355.543" Width="495.312">
+        Title="StandardsWindow" Height="416.543" Width="513.312">
 
     <Grid>
         <DataGrid x:Name="dataGrid" HeadersVisibility="None"/>
-        
-        <Label x:Name="label" Content="Sender" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="93.623"/>     
-        <TextBox x:Name="tb_standards_sender_name" HorizontalAlignment="Left" Height="23" Margin="10,40.96,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tb_standards_sender_street" HorizontalAlignment="Left" Height="23" Margin="10,69.383,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tb_standards_sender_zip" HorizontalAlignment="Left" Margin="10,99.05,0,0" TextWrapping="Wrap" Text="TextBox" Width="120" Height="23" VerticalAlignment="Top"/>
-        <TextBox x:Name="tb_standards_sender_phone" HorizontalAlignment="Left" Height="23" Margin="10,127.05,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-       
-        <Label x:Name="label_Copy" Content="Empfänger" Margin="152.667,10,241.022,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tb_standards_receiver_name" Height="51.423" Margin="152.667,40.96,214.645,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
-        <TextBox x:Name="tb_standards_receiver_street" Height="23" Margin="152.667,99.05,214.645,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
-        <TextBox x:Name="tb_standards_receiver_zip" Height="23" Margin="152.667,127.05,214.645,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
+        <Border BorderBrush="#FF636262" BorderThickness="1" Margin="10,10,202.646,0" Height="180.717" VerticalAlignment="Top"/>
+
+        <Label x:Name="lbl_standards_adresshead" Content="Adresskopf" HorizontalAlignment="Left" Margin="16,10,0,0" VerticalAlignment="Top" Width="93.623"/>
+        <Label x:Name="label" Content="Sender:" HorizontalAlignment="Left" Margin="16,31.999,0,0" VerticalAlignment="Top" Width="93.623"/>
+        <TextBox x:Name="tb_standards_sender_name" HorizontalAlignment="Left" Height="23" Margin="16,62.96,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tb_standards_sender_street" HorizontalAlignment="Left" Height="23" Margin="16,91.383,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tb_standards_sender_zip" HorizontalAlignment="Left" Margin="16,121.05,0,0" TextWrapping="Wrap" Text="TextBox" Width="120" Height="23" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_standards_sender_phone" HorizontalAlignment="Left" Margin="16,149.05,0,0" TextWrapping="Wrap" Text="TextBox" Width="120" Height="23" VerticalAlignment="Top" />
+
+        <Label x:Name="label_Copy" Content="Empfänger:" Margin="158.667,31.999,235.022,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_standards_receiver_name" Height="51.423" Margin="158.667,62.96,208.645,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_standards_receiver_street" Height="23" Margin="158.667,121.05,208.645,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_standards_receiver_zip" Margin="158.667,149.05,208.645,0" TextWrapping="Wrap" Text="TextBox" Height="23" VerticalAlignment="Top"/>
+        <Border BorderBrush="#FF939393" BorderThickness="1" Height="1" Margin="10,0,202.646,173.543" VerticalAlignment="Bottom"/>
+        <Label x:Name="label1" Content="Speicherort" HorizontalAlignment="Left" Margin="10,0,0,128.583" VerticalAlignment="Bottom" Width="99.623"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="16,0,0,105.583" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Bottom" Width="197.667"/>
+        <Button x:Name="btn_standards_openFileDialog" Content="Open" Margin="218.667,0,208.645,105.583" VerticalAlignment="Bottom" Height="23"/>
     </Grid>
 
 </Window>
