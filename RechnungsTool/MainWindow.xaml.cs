@@ -36,11 +36,24 @@ namespace RechnungsTool
             IEnumerable<XElement> ConfigData = xelement.Elements();
             foreach (var Sender in ConfigData)
             {
+                // Test
                 Console.WriteLine("{0} wohnt im {1} {2}",
                     Sender.Element("Name").Value,
                     Sender.Element("Adresse").Value,
                     Sender.Element("Stadt").Value);
-            }
+
+                // PreText der TextBox anpassen
+                tb_sender_name.Clear();
+                tb_sender_name.Text = Sender.Element("Name").Value;
+
+                tb_sender_street.Clear();
+                tb_sender_street.Text = Sender.Element("Adresse").Value;
+
+                tb_sender_zip.Clear();
+                tb_sender_zip.Text = Sender.Element("Stadt").Value;
+
+            }          
+
         }
 
         private void Menu_1_Sub_Exit_Click(object sender, RoutedEventArgs e)
