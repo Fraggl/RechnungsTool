@@ -59,8 +59,7 @@ namespace RechnungsTool
 
         private void Menu_2_Sub_Standarts_Click(object sender, RoutedEventArgs e)
         {
-            Window frm = new Window();
-            frm.Show();
+
         }
 
         private void dpick_1_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
