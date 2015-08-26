@@ -14,6 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Novacode;
 using System.Diagnostics;
+using System.IO;
+using System.Xml.Linq;
 
 namespace RechnungsTool
 {
@@ -25,6 +27,20 @@ namespace RechnungsTool
         public MainWindow()
         {
             InitializeComponent();
+            LoadCfg();
+        }
+
+        private void LoadCfg()
+        {
+            XElement xelement = XElement.Load("C:\\testcfg.xml");
+            IEnumerable<XElement> ConfigData = xelement.Elements();
+            foreach (var Sender in ConfigData)
+            {
+                Console.WriteLine("{0} wohnt im {1} {2}",
+                    Sender.Element("Name").Value,
+                    Sender.Element("Adresse").Value,
+                    Sender.Element("Stadt").Value);
+            }
         }
 
         private void Menu_1_Sub_Exit_Click(object sender, RoutedEventArgs e)
@@ -59,7 +75,11 @@ namespace RechnungsTool
 
         private void Menu_2_Sub_Standarts_Click(object sender, RoutedEventArgs e)
         {
+            //Window StandardsWindow = new Window();
+            //StandardsWindow.Show();
 
+            var StandardsWindow = new StandardsWindow();
+            StandardsWindow.ShowDialog();
         }
 
         private void dpick_1_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
@@ -94,8 +114,6 @@ namespace RechnungsTool
                 + Environment.NewLine
                 + tb_receiver_zip.Text
                 + Environment.NewLine
-                + Environment.NewLine
-                + tb_receiver_phone.Text
                 + Environment.NewLine
                 + Environment.NewLine
                 + Environment.NewLine;
@@ -144,5 +162,6 @@ namespace RechnungsTool
                 Process.Start("WINWORD.EXE", fileName);
 
         }
+
     }
 }
