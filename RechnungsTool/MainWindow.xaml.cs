@@ -36,13 +36,8 @@ namespace RechnungsTool
             IEnumerable<XElement> ConfigData = xelement.Elements();
             foreach (var Sender in ConfigData)
             {
-                // Test
-                Console.WriteLine("{0} wohnt im {1} {2}",
-                    Sender.Element("Name").Value,
-                    Sender.Element("Adresse").Value,
-                    Sender.Element("Stadt").Value);
-
                 // PreText der TextBox anpassen
+                // Sender
                 tb_sender_name.Clear();
                 tb_sender_name.Text = Sender.Element("Name").Value;
 
@@ -51,8 +46,21 @@ namespace RechnungsTool
 
                 tb_sender_zip.Clear();
                 tb_sender_zip.Text = Sender.Element("Stadt").Value;
+            }
 
-            }          
+            foreach (var Receiver in ConfigData)
+            {
+                // Receiver
+                tb_receiver_name.Clear();
+                tb_receiver_name.Text = Receiver.Element("Name").Value;
+
+                tb_receiver_street.Clear();
+                tb_receiver_street.Text = Receiver.Element("Adresse").Value;
+
+                tb_receiver_zip.Clear();
+                tb_receiver_zip.Text = Receiver.Element("Stadt").Value;
+
+            }
 
         }
 
