@@ -36,8 +36,6 @@ namespace RechnungsTool
             IEnumerable<XElement> ConfigData = xelement.Elements();
             foreach (var Sender in ConfigData)
             {
-                // PreText der TextBox anpassen
-                // Sender
                 tb_sender_name.Clear();
                 tb_sender_name.Text = Sender.Element("Name").Value;
 
