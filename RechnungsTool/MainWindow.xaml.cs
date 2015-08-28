@@ -32,20 +32,14 @@ namespace RechnungsTool
 
         private void LoadCfg()
         {
-            XElement xelement = XElement.Load("C:\\testcfg.xml");
+            LoadReceiver();
+            LoadSender();
+        }
+
+        private void LoadReceiver()
+        {
+            XElement xelement = XElement.Load("C:\\ReceiverCfg.xml");
             IEnumerable<XElement> ConfigData = xelement.Elements();
-            foreach (var Sender in ConfigData)
-            {
-                tb_sender_name.Clear();
-                tb_sender_name.Text = Sender.Element("Name").Value;
-
-                tb_sender_street.Clear();
-                tb_sender_street.Text = Sender.Element("Adresse").Value;
-
-                tb_sender_zip.Clear();
-                tb_sender_zip.Text = Sender.Element("Stadt").Value;
-            }
-
             foreach (var Receiver in ConfigData)
             {
                 // Receiver
@@ -59,7 +53,23 @@ namespace RechnungsTool
                 tb_receiver_zip.Text = Receiver.Element("Stadt").Value;
 
             }
+        }
 
+        private void LoadSender()
+        {
+            XElement xelement = XElement.Load("C:\\SenderCfg.xml");
+            IEnumerable<XElement> ConfigData = xelement.Elements();
+            foreach (var Sender in ConfigData)
+            {
+                tb_sender_name.Clear();
+                tb_sender_name.Text = Sender.Element("Name").Value;
+
+                tb_sender_street.Clear();
+                tb_sender_street.Text = Sender.Element("Adresse").Value;
+
+                tb_sender_zip.Clear();
+                tb_sender_zip.Text = Sender.Element("Stadt").Value;
+            }
         }
 
         private void Menu_1_Sub_Exit_Click(object sender, RoutedEventArgs e)
