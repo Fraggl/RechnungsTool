@@ -38,6 +38,7 @@ namespace RechnungsTool
 
         private void LoadReceiver()
         {
+
             XElement xelement = XElement.Load("C:\\ReceiverCfg.xml");
             IEnumerable<XElement> ConfigData = xelement.Elements();
             foreach (var Receiver in ConfigData)
@@ -55,7 +56,7 @@ namespace RechnungsTool
             }
         }
 
-        # Test
+        // Test
         private void LoadSender()
         {
             XElement xelement = XElement.Load("C:\\SenderCfg.xml");
