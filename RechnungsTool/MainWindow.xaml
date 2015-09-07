@@ -37,7 +37,7 @@
             <MenuItem Header="Einstellungen"
                       ItemContainerStyle="{StaticResource ThemeMenuItemStyle}" >
                 <MenuItem x:Name="Menu_2_Sub_Standarts" Header="Standartwerte" Click="Menu_2_Sub_Standarts_Click" />
-                <MenuItem x:Name="Menu_2_Sub_Save" Header="Speicherort" Click="Menu_2_Sub_Save_Click" /> 
+                <MenuItem x:Name="Menu_2_Sub_Save" Header="Speicherort" Click="Menu_2_Sub_Save_Click" />
             </MenuItem>
             <MenuItem Header="Help" ItemsSource="{Binding Themes}" 
               ItemContainerStyle="{StaticResource ThemeMenuItemStyle}"  />
@@ -59,7 +59,7 @@
                 </ItemsPanelTemplate>
             </StatusBar.ItemsPanel>
             <StatusBarItem Grid.Column="1" Grid.Row="0">
-                <TextBlock Text="Inge´s Rechnungs-Tool V0.3 19.08.2015" />
+                <TextBlock Text="Inge's Rechnungs-Tool V0.3 19.08.2015" />
             </StatusBarItem>
         </StatusBar>
 
@@ -91,6 +91,7 @@
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
+        <Button x:Name="btn_addItem" Content="+" HorizontalAlignment="Right" Margin="0,225,67.301,216.106" Grid.Row="1" Width="75" d:LayoutOverrides="Height" Click="btn_addItem_Click"/>
 
 
 
