@@ -91,7 +91,7 @@
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        <Button x:Name="btn_addItem" Content="+" HorizontalAlignment="Right" Margin="0,225,67.301,216.106" Grid.Row="1" Width="75" d:LayoutOverrides="Height" Click="btn_addItem_Click"/>
+        <Button x:Name="btn_addItem" Content="+" HorizontalAlignment="Right" Margin="0,225,67,207" Grid.Row="1" Width="75" Click="btn_addItem_Click"/>
 
 
 
