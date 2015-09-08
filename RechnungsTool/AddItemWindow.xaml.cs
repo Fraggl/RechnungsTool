@@ -23,5 +23,15 @@ namespace RechnungsTool
         {
             InitializeComponent();
         }
+
+        private void AddItem_Add_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void AddItem_Beenden_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();            
+        }
     }
 }

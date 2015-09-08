@@ -14,9 +14,10 @@
         <TextBox x:Name="tB_AddItem_Personen" Height="23" Margin="0,43,108.544,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" HorizontalAlignment="Right" Width="63.195"/>
         <TextBox x:Name="tB_AddItem_Preis" HorizontalAlignment="Right" Margin="0,81.066,108.544,0" TextWrapping="Wrap" Text="TextBox" Width="63.195" Height="21.961" VerticalAlignment="Top"/>
         <Label x:Name="lbl_AddItem_Leistung" Content="Leistung" HorizontalAlignment="Left" Margin="10,39,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lbl_AddItem_Avis" Content="Avis Nr." HorizontalAlignment="Left" Margin="14.35,77.066,0,102.955" d:LayoutOverrides="Height"/>
-        <Label x:Name="lbl_AddItem_Personen" Content="Personen" Margin="224.105,39,192.914,0" d:LayoutOverrides="Width" VerticalAlignment="Top"/>
-        <Label x:Name="lbl_AddItem_Preis" Content="Preis" Margin="224.105,77.066,216.452,102.956" d:LayoutOverrides="Width, Height"/>
-
+        <Label x:Name="lbl_AddItem_Avis" Content="Avis Nr." HorizontalAlignment="Left" Margin="14.35,77.066,0,0" Height="25.961" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_AddItem_Personen" Content="Personen" Margin="224.105,39,176.739,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_AddItem_Preis" Content="Preis" Margin="224.105,77.066,192.914,0" Height="25.961" VerticalAlignment="Top"/>
+        <Button x:Name="btn_AddItem_Hinzufuegen" Content="Hinzufügen" HorizontalAlignment="Left" Margin="14.35,0,0,85.211" VerticalAlignment="Bottom" Width="131.805" Click="AddItem_Add_Click"/>
+        <Button x:Name="btn_AddItem_Beenden" Content="Beenden" Margin="185.163,0,192.914,85.211" VerticalAlignment="Bottom" Click="AddItem_Beenden_Click"/>
     </Grid>
 </Window>
