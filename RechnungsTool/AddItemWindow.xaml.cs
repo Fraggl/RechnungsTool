@@ -22,6 +22,13 @@ namespace RechnungsTool
         public AddItemWindow()
         {
             InitializeComponent();
+            cB_AddItem_Leistung.Items.Add("Schloßführung 1");
+            cB_AddItem_Leistung.Items.Add("Schloßführung 2");
+            cB_AddItem_Leistung.Items.Add("Schloßführung 3");
+
+            cB_AddItem_Avis.Items.Add("20830");
+            cB_AddItem_Avis.Items.Add("20842");
+            cB_AddItem_Avis.Items.Add("20846");
         }
 
         private void AddItem_Add_Click(object sender, RoutedEventArgs e)
@@ -33,5 +40,7 @@ namespace RechnungsTool
         {
             this.Close();            
         }
+
+
     }
 }

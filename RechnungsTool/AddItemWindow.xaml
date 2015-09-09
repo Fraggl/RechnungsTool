@@ -11,8 +11,8 @@
         <DatePicker x:Name="dpick_AddItem_Date" HorizontalAlignment="Left" Margin="79.432,10,0,0" VerticalAlignment="Top" Width="125"/>
         <ComboBox x:Name="cB_AddItem_Leistung" Margin="79.432,43,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="125" d:LayoutOverrides="HorizontalAlignment"/>
         <ComboBox x:Name="cB_AddItem_Avis" Margin="79.432,81.067,273.07,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tB_AddItem_Personen" Height="23" Margin="0,43,108.544,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" HorizontalAlignment="Right" Width="63.195"/>
-        <TextBox x:Name="tB_AddItem_Preis" HorizontalAlignment="Right" Margin="0,81.066,108.544,0" TextWrapping="Wrap" Text="TextBox" Width="63.195" Height="21.961" VerticalAlignment="Top"/>
+        <TextBox x:Name="tB_AddItem_Personen" Height="23" Margin="0,43,108.544,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" HorizontalAlignment="Right" Width="63.195"/>
+        <TextBox x:Name="tB_AddItem_Preis" HorizontalAlignment="Right" Margin="0,81.066,108.544,0" TextWrapping="Wrap" Text="" Width="63.195" Height="21.961" VerticalAlignment="Top"/>
         <Label x:Name="lbl_AddItem_Leistung" Content="Leistung" HorizontalAlignment="Left" Margin="10,39,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbl_AddItem_Avis" Content="Avis Nr." HorizontalAlignment="Left" Margin="14.35,77.066,0,0" Height="25.961" VerticalAlignment="Top"/>
         <Label x:Name="lbl_AddItem_Personen" Content="Personen" Margin="224.105,39,176.739,0" VerticalAlignment="Top"/>
