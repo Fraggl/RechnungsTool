@@ -21,6 +21,7 @@ namespace RechnungsTool
     {
         public AddItemWindow()
         {
+            // -> Verschieben in ini
             InitializeComponent();
             cB_AddItem_Leistung.Items.Add("Schloßführung 1");
             cB_AddItem_Leistung.Items.Add("Schloßführung 2");
@@ -33,7 +34,8 @@ namespace RechnungsTool
 
         private void AddItem_Add_Click(object sender, RoutedEventArgs e)
         {
-            
+            // Variablen mit den Werten befüllen
+            // Einfache Var? Lists? Verschachtelt? Liste mit Einträgen - > jeder Untereintrag = ein einzelner Datensatz
         }
 
         private void AddItem_Beenden_Click(object sender, RoutedEventArgs e)
