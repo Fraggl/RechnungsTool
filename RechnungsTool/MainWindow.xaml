@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RechnungsTool"
         mc:Ignorable="d"
-        Title="MainWindow" Height="541.066" Width="564.301">
+        Title="MainWindow" Height="669.066" Width="500
+        ">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="23"/>
@@ -64,8 +65,8 @@
         </StatusBar>
 
         <!-- Middle Contentarea -->
-        <DataGrid HeadersVisibility="None" Grid.Row="1"/>
-        <DatePicker x:Name="dpick_1" Margin="0,10,40.661,0" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Top" SelectedDateFormat="Short" SelectedDateChanged="dpick_1_SelectedDateChanged"/>
+        <DataGrid HeadersVisibility="None" Grid.Row="1" RenderTransformOrigin="0.496,0.657"/>
+        <DatePicker x:Name="dpick_1" Margin="0,14.01,73,0" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Top" SelectedDateFormat="Short" SelectedDateChanged="dpick_1_SelectedDateChanged" Width="100" Height="24" d:LayoutOverrides="HorizontalAlignment"/>
 
         <Label x:Name="lbl_sender" Content="Absender" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="tb_sender_name"  HorizontalAlignment="Left" Height="23" Margin="10,35.96,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Inge die Große" VerticalAlignment="Top" Width="120"  ToolTip="Namen des Absenders"/>
@@ -74,7 +75,7 @@
         <TextBox x:Name="tb_sender_phone" HorizontalAlignment="Left" Height="23" Margin="10,119.96,0,0" Grid.Row="1" TextWrapping="Wrap" Text="01234 11978" VerticalAlignment="Top" Width="120"/>
 
         <Label x:Name="lbl_receiver" Content="Empfänger" HorizontalAlignment="Left" Margin="174,5,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tb_receiver_name" HorizontalAlignment="Left" Height="51" Margin="174,35.96,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Tourismus und Marketing GmbH" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tb_receiver_name" HorizontalAlignment="Left" Height="46" Margin="174,35.96,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Tourismus und Marketing GmbH" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="tb_receiver_street" HorizontalAlignment="Left" Height="23" Margin="174,91.96,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Platz 11-16" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="tb_receiver_zip" HorizontalAlignment="Left" Height="23" Margin="174,119.96,0,0" Grid.Row="1" TextWrapping="Wrap" Text="12794 Berg" VerticalAlignment="Top" Width="120"/>
 
@@ -82,7 +83,7 @@
         <Label x:Name="lbl_datepicked" Content="" Margin="102,171.04,262.301,0" Grid.Row="1" VerticalAlignment="Top"/>
 
 
-        <RichTextBox x:Name="richTextBox" Margin="10,202,262.301,0" Grid.Row="1">
+        <RichTextBox x:Name="richTextBox" Margin="10,202,0,273.033" Grid.Row="1" Width="284" HorizontalAlignment="Left">
             <FlowDocument>
                 <Paragraph>
                     <Run Text="Sehr geehrte Damen und Herren,
@@ -91,7 +92,18 @@
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        <Button x:Name="btn_addItem" Content="+" HorizontalAlignment="Right" Margin="0,225,67,207" Grid.Row="1" Width="75" Click="btn_addItem_Click"/>
+        <Button x:Name="btn_addItem" Content="+" Margin="0,0,73,273.033" Grid.Row="1" VerticalAlignment="Bottom" Click="btn_addItem_Click" HorizontalAlignment="Right" Width="75"/>
+        <ListView x:Name="listView" Height="137.5" Margin="10,0,73,116.066" Grid.Row="1" VerticalAlignment="Bottom" RenderTransformOrigin="-0.015,0.045">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Datum" Width="40" DisplayMemberBinding="{Binding LW_Date}"/>
+                    <GridViewColumn Header="Leistung" Width="175"/>
+                    <GridViewColumn Header="Avis Nr." Width="50"/>
+                    <GridViewColumn Header="Personen" Width="55"/>
+                    <GridViewColumn Header="Preis" Width="40"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
 
 
 
