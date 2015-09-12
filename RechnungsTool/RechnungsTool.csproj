@@ -78,6 +78,7 @@
     <Compile Include="AddItemWindow.xaml.cs">
       <DependentUpon>AddItemWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Globals.cs" />
     <Compile Include="StandardsWindow.xaml.cs">
       <DependentUpon>StandardsWindow.xaml</DependentUpon>
     </Compile>

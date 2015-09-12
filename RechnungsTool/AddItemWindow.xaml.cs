@@ -36,6 +36,13 @@ namespace RechnungsTool
         {
             // Variablen mit den Werten befüllen
             // Einfache Var? Lists? Verschachtelt? Liste mit Einträgen - > jeder Untereintrag = ein einzelner Datensatz
+            if (cB_AddItem_Avis.SelectedItem != null)
+            {
+
+            }
+            else
+            { //Value is null }
+            }
         }
 
         private void AddItem_Beenden_Click(object sender, RoutedEventArgs e)
