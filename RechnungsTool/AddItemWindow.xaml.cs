@@ -38,7 +38,9 @@ namespace RechnungsTool
             // Einfache Var? Lists? Verschachtelt? Liste mit Einträgen - > jeder Untereintrag = ein einzelner Datensatz
             if (cB_AddItem_Avis.SelectedItem != null)
             {
-
+                Globals.GlobalVar_Avis.Add(cB_AddItem_Avis.SelectedItem as string);
+                Console.WriteLine(Globals.GlobalVar_Avis.Count);
+                Console.WriteLine(Globals.GlobalVar_Avis.Last());
             }
             else
             { //Value is null }

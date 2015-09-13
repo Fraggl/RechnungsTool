@@ -8,11 +8,11 @@ namespace RechnungsTool
 {
     public static class Globals
     {
-        // private string m_globalVar = "";
-        public static string GlobalVar_Date = "";
-        public static string GlobalVar_Power = "";
-        public static int[] GlobalVar_Avis;
-        public static string GlobalVar_Persons = "";
-        public static string GlobalVar_Price = "";
+        public static List<DateTime> GlobalVar_Date = new List<DateTime>();
+        public static List<string> GlobalVar_Power = new List<string>();
+        //public static string[] GlobalVar_Avis;
+        public static List<string> GlobalVar_Avis = new List<string>();
+        public static List<int> GlobalVar_Persons = new List<int>();
+        public static List<int> GlobalVar_Price = new List<int>();
     }
 }
