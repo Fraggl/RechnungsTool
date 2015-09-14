@@ -36,10 +36,12 @@ namespace RechnungsTool
         {
             // Variablen mit den Werten befüllen
             // Einfache Var? Lists? Verschachtelt? Liste mit Einträgen - > jeder Untereintrag = ein einzelner Datensatz
-            if (cB_AddItem_Avis.SelectedItem != null && cB_AddItem_Leistung.SelectedItem != null)
+            if (cB_AddItem_Avis.SelectedItem != null && cB_AddItem_Leistung.SelectedItem != null && tB_AddItem_Personen != null && tB_AddItem_Preis != null)
             {
-                // Globals.GlobalVar_Avis.Add(cB_AddItem_Avis.SelectedItem as string);
                 Globals.GlobalVar_Avis.Add(cB_AddItem_Avis.SelectedItem.ToString());
+                Globals.GlobalVar_Power.Add(cB_AddItem_Leistung.SelectedItem.ToString());
+                // Globals.GlobalVar_Persons.Add(Convert.ToInt32(tB_AddItem_Personen));
+                // Globals.GlobalVar_Price.Add(Convert.ToInt32(tB_AddItem_Preis));
                 Console.WriteLine(Globals.GlobalVar_Avis.Count);
                 Console.WriteLine(Globals.GlobalVar_Avis.Last());
             }
