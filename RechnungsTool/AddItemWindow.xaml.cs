@@ -40,10 +40,22 @@ namespace RechnungsTool
             {
                 Globals.GlobalVar_Avis.Add(cB_AddItem_Avis.SelectedItem.ToString());
                 Globals.GlobalVar_Power.Add(cB_AddItem_Leistung.SelectedItem.ToString());
-                // Globals.GlobalVar_Persons.Add(Convert.ToInt32(tB_AddItem_Personen));
-                // Globals.GlobalVar_Price.Add(Convert.ToInt32(tB_AddItem_Preis));
+                Globals.GlobalVar_Persons.Add(Convert.ToInt32(tB_AddItem_Personen.Text));
+                Globals.GlobalVar_Price.Add(Convert.ToInt32(tB_AddItem_Preis.Text));
+
+                /* Console-Test */
                 Console.WriteLine(Globals.GlobalVar_Avis.Count);
+                Console.WriteLine(Globals.GlobalVar_Power.Last());
                 Console.WriteLine(Globals.GlobalVar_Avis.Last());
+                Console.WriteLine(Globals.GlobalVar_Persons.Last());
+                Console.WriteLine(Globals.GlobalVar_Price.Last());
+
+                foreach (var item in Globals.GlobalVar_Persons)
+                {
+                    Console.WriteLine(item);
+                };
+                /* Console-Test End */
+
             }
             else
             { //Value is null }
