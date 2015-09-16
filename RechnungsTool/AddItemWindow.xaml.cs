@@ -56,6 +56,8 @@ namespace RechnungsTool
                 };
                 /* Console-Test End */
 
+                addItemsListView();
+
             }
             else
             { //Value is null }
@@ -63,9 +65,14 @@ namespace RechnungsTool
             }
         }
 
+        private void addItemsListView()
+        {
+            /* Func to add the entrys to the listview*/
+         }
+
         private void AddItem_Beenden_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();            
+            this.Close();
         }
 
 
