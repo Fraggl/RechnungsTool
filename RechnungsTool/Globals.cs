@@ -10,7 +10,6 @@ namespace RechnungsTool
     {
         public static List<DateTime> GlobalVar_Date = new List<DateTime>();
         public static List<string> GlobalVar_Power = new List<string>();
-        //public static string[] GlobalVar_Avis;
         public static List<string> GlobalVar_Avis = new List<string>();
         public static List<int> GlobalVar_Persons = new List<int>();
         public static List<int> GlobalVar_Price = new List<int>();

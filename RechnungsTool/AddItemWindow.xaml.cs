@@ -34,8 +34,7 @@ namespace RechnungsTool
 
         private void AddItem_Add_Click(object sender, RoutedEventArgs e)
         {
-            // Variablen mit den Werten befüllen
-            // Einfache Var? Lists? Verschachtelt? Liste mit Einträgen - > jeder Untereintrag = ein einzelner Datensatz
+            /* check, if all fields are filled */
             if (cB_AddItem_Avis.SelectedItem != null && cB_AddItem_Leistung.SelectedItem != null && tB_AddItem_Personen != null && tB_AddItem_Preis != null)
             {
                 Globals.GlobalVar_Avis.Add(cB_AddItem_Avis.SelectedItem.ToString());
@@ -60,7 +59,8 @@ namespace RechnungsTool
 
             }
             else
-            { //Value is null }
+            { 
+                // Error-Msg
                 MessageBox.Show("Bitte fülle alle Eingabefelder aus");
             }
         }
@@ -73,6 +73,7 @@ namespace RechnungsTool
         private void AddItem_Beenden_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+            // Maybe add code to fill the listview here?
         }
 
 
