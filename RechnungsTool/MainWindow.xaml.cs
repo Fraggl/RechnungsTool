@@ -196,5 +196,10 @@ namespace RechnungsTool
             var AddItemWindow = new AddItemWindow();
             AddItemWindow.ShowDialog();
         }
+
+        private void btn_refresh_Click(object sender, RoutedEventArgs e)
+        {
+            // add update listview here
+        }
     }
 }
