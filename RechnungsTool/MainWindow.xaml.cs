@@ -24,6 +24,7 @@ namespace RechnungsTool
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
@@ -200,10 +201,30 @@ namespace RechnungsTool
         private void btn_refresh_Click(object sender, RoutedEventArgs e)
         {
             // add update listview here
+            string vLeistung = Globals.GlobalVar_Power.ElementAt(0);
+            string vAvisNr = Globals.GlobalVar_Avis.ElementAt(0);
+            int vPersonen = Globals.GlobalVar_Persons.ElementAt(0);
+            int vPreis = Globals.GlobalVar_Price.ElementAt(0);
 
-            ListViewItem item = new ListViewItem();
-            this.listView.Items.Add(Globals.GlobalVar_Persons.ElementAt(0));
+            this.listView_1.Items.Add(new MyItem { Leistung = vLeistung, AvisNr = vAvisNr, Personen = vPersonen, Preis = vPreis });
+
+
+            // Step 1: Clear Listview
+
+            // Step 2: count how many entrys in the lists
+
+            // Step 3: for each entry: generate listView-row            
         }
 
+        public class MyItem
+        {
+            public string Leistung { get; set; }
+
+            public string AvisNr { get; set; }
+
+            public int Personen { get; set; }
+
+            public int Preis { get; set; }            
+        }
     }
 }

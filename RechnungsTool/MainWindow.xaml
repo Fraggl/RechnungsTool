@@ -93,14 +93,14 @@
             </FlowDocument>
         </RichTextBox>
         <Button x:Name="btn_addItem" Content="+" Margin="0,0,73,273.033" Grid.Row="1" VerticalAlignment="Bottom" Click="btn_addItem_Click" HorizontalAlignment="Right" Width="75"/>
-        <ListView x:Name="listView" Height="137.5" Margin="10,0,73,116.066" Grid.Row="1" VerticalAlignment="Bottom" RenderTransformOrigin="-0.015,0.045">
+        <ListView x:Name="listView_1" Height="137.5" Margin="10,0,73,116.066" Grid.Row="1" VerticalAlignment="Bottom" RenderTransformOrigin="-0.015,0.045">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Datum" Width="40" DisplayMemberBinding="{Binding LW_Date}"/>
-                    <GridViewColumn Header="Leistung" Width="175"/>
-                    <GridViewColumn Header="Avis Nr." Width="50"/>
-                    <GridViewColumn Header="Personen" Width="55"/>
-                    <GridViewColumn Header="Preis" Width="40"/>
+                    <GridViewColumn Header="Datum" Width="40" DisplayMemberBinding="{Binding Datum}"/>
+                    <GridViewColumn Header="Leistung" Width="175" DisplayMemberBinding="{Binding Leistung}"/>
+                    <GridViewColumn Header="Avis Nr." Width="50" DisplayMemberBinding="{Binding Avis}"/>
+                    <GridViewColumn Header="Personen" Width="55" DisplayMemberBinding="{Binding Personen}"/>
+                    <GridViewColumn Header="Preis" Width="40" DisplayMemberBinding="{Binding Preis}"/>
                 </GridView>
             </ListView.View>
         </ListView>
