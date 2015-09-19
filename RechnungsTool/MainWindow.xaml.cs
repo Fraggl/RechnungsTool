@@ -200,6 +200,10 @@ namespace RechnungsTool
         private void btn_refresh_Click(object sender, RoutedEventArgs e)
         {
             // add update listview here
+
+            ListViewItem item = new ListViewItem();
+            this.listView.Items.Add(Globals.GlobalVar_Persons.ElementAt(0));
         }
+
     }
 }
