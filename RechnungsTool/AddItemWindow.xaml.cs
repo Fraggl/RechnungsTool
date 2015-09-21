@@ -56,6 +56,12 @@ namespace RechnungsTool
                 };
                 /* Console-Test End */
 
+                // Reset after adding
+                cB_AddItem_Avis.SelectedItem = null;
+                cB_AddItem_Leistung.SelectedItem = null;
+                tB_AddItem_Personen.Text = "";
+                tB_AddItem_Preis.Text = "";
+
                 addItemsListView();
 
             }
