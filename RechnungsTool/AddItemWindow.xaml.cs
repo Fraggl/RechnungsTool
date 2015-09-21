@@ -35,8 +35,9 @@ namespace RechnungsTool
         private void AddItem_Add_Click(object sender, RoutedEventArgs e)
         {
             /* check, if all fields are filled */
-            if (cB_AddItem_Avis.SelectedItem != null && cB_AddItem_Leistung.SelectedItem != null && tB_AddItem_Personen != null && tB_AddItem_Preis != null)
+            if (dpick_AddItem_Date.SelectedDate != null && cB_AddItem_Avis.SelectedItem != null && cB_AddItem_Leistung.SelectedItem != null && tB_AddItem_Personen != null && tB_AddItem_Preis != null)
             {
+
                 Globals.GlobalVar_Avis.Add(cB_AddItem_Avis.SelectedItem.ToString());
                 Globals.GlobalVar_Power.Add(cB_AddItem_Leistung.SelectedItem.ToString());
                 Globals.GlobalVar_Persons.Add(Convert.ToInt32(tB_AddItem_Personen.Text));

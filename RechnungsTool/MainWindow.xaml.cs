@@ -219,6 +219,27 @@ namespace RechnungsTool
             }                                                          
         }
 
+        public void reload_listView()
+        {
+            // Step 1: Clear Listview
+            listView_1.Items.Clear();
+
+            // Step 2: count how many entrys in the lists
+            int i = Globals.GlobalVar_Avis.Count;
+
+            // Step 3: for each entry: generate listView-row  
+            int b = 0;
+            for (int x = 0; x < i; x++)
+            {
+                string vLeistung = Globals.GlobalVar_Power.ElementAt(b);
+                string vAvisNr = Globals.GlobalVar_Avis.ElementAt(b);
+                int vPersonen = Globals.GlobalVar_Persons.ElementAt(b);
+                int vPreis = Globals.GlobalVar_Price.ElementAt(b);
+                b++;
+                this.listView_1.Items.Add(new MyItem { Leistung = vLeistung, Avis = vAvisNr, Personen = vPersonen, Preis = vPreis });
+            }
+        }
+
 
         public class MyItem
         {
