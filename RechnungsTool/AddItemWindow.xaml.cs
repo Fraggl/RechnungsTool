@@ -37,7 +37,7 @@ namespace RechnungsTool
             /* check, if all fields are filled */
             if (dpick_AddItem_Date.SelectedDate != null && cB_AddItem_Avis.SelectedItem != null && cB_AddItem_Leistung.SelectedItem != null && tB_AddItem_Personen != null && tB_AddItem_Preis != null)
             {
-
+                Globals.GlobalVar_Date.Add(dpick_AddItem_Date.SelectedDate.Value);
                 Globals.GlobalVar_Avis.Add(cB_AddItem_Avis.SelectedItem.ToString());
                 Globals.GlobalVar_Power.Add(cB_AddItem_Leistung.SelectedItem.ToString());
                 Globals.GlobalVar_Persons.Add(Convert.ToInt32(tB_AddItem_Personen.Text));
@@ -45,6 +45,7 @@ namespace RechnungsTool
 
                 /* Console-Test */
                 Console.WriteLine(Globals.GlobalVar_Avis.Count);
+                Console.WriteLine(Globals.GlobalVar_Date.Last());
                 Console.WriteLine(Globals.GlobalVar_Power.Last());
                 Console.WriteLine(Globals.GlobalVar_Avis.Last());
                 Console.WriteLine(Globals.GlobalVar_Persons.Last());

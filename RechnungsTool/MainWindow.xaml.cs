@@ -231,18 +231,21 @@ namespace RechnungsTool
             int b = 0;
             for (int x = 0; x < i; x++)
             {
+                DateTime vDate = Globals.GlobalVar_Date.ElementAt(b);
                 string vLeistung = Globals.GlobalVar_Power.ElementAt(b);
                 string vAvisNr = Globals.GlobalVar_Avis.ElementAt(b);
                 int vPersonen = Globals.GlobalVar_Persons.ElementAt(b);
                 int vPreis = Globals.GlobalVar_Price.ElementAt(b);
                 b++;
-                this.listView_1.Items.Add(new MyItem { Leistung = vLeistung, Avis = vAvisNr, Personen = vPersonen, Preis = vPreis });
+                this.listView_1.Items.Add(new MyItem { Datestamp = vDate, Leistung = vLeistung, Avis = vAvisNr, Personen = vPersonen, Preis = vPreis });
             }
         }
 
 
         public class MyItem
         {
+            public DateTime Datestamp { get; set; }
+
             public string Leistung { get; set; }
 
             public string Avis { get; set; }
