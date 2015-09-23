@@ -69,7 +69,7 @@ namespace RechnungsTool
             else
             { 
                 // Error-Msg
-                MessageBox.Show("Bitte fülle alle Eingabefelder aus");
+                MessageBox.Show("Bitte fülle alle Eingabefelder aus, \n da sonst der Vorgang nicht abgeschlossen werden kann", "Wichtiger Hinweis");
             }
         }
 
