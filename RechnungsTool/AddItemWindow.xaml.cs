@@ -62,9 +62,6 @@ namespace RechnungsTool
                 cB_AddItem_Leistung.SelectedItem = null;
                 tB_AddItem_Personen.Text = "";
                 tB_AddItem_Preis.Text = "";
-
-                addItemsListView();
-
             }
             else
             { 
