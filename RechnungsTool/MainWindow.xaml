@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RechnungsTool"
         mc:Ignorable="d"
-        Title="MainWindow" Height="669.066" Width="500
+        Title="Rechnungs-Tool" Height="669.066" Width="500
         ">
     <Grid>
         <Grid.RowDefinitions>
