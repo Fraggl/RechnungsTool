@@ -200,6 +200,7 @@ namespace RechnungsTool
 
         private void btn_refresh_Click(object sender, RoutedEventArgs e)
         {
+            /*
             // Step 1: Clear Listview
             listView_1.Items.Clear();
 
@@ -216,7 +217,9 @@ namespace RechnungsTool
                 int vPreis = Globals.GlobalVar_Price.ElementAt(b);
                 b++;
                 this.listView_1.Items.Add(new MyItem { Leistung = vLeistung, Avis = vAvisNr, Personen = vPersonen, Preis = vPreis });
-            }                                                          
+            }    
+            */
+            reload_listView();                                                      
         }
 
         public void reload_listView()
@@ -231,20 +234,20 @@ namespace RechnungsTool
             int b = 0;
             for (int x = 0; x < i; x++)
             {
-                DateTime vDate = Globals.GlobalVar_Date.ElementAt(b);
+                DateTime vDate = Globals.GlobalVar_Date.ElementAt(b).Date;
                 string vLeistung = Globals.GlobalVar_Power.ElementAt(b);
                 string vAvisNr = Globals.GlobalVar_Avis.ElementAt(b);
                 int vPersonen = Globals.GlobalVar_Persons.ElementAt(b);
                 int vPreis = Globals.GlobalVar_Price.ElementAt(b);
                 b++;
-                this.listView_1.Items.Add(new MyItem { Datestamp = vDate, Leistung = vLeistung, Avis = vAvisNr, Personen = vPersonen, Preis = vPreis });
+                this.listView_1.Items.Add(new MyItem { Datum = vDate, Leistung = vLeistung, Avis = vAvisNr, Personen = vPersonen, Preis = vPreis });
             }
         }
 
 
         public class MyItem
         {
-            public DateTime Datestamp { get; set; }
+            public DateTime Datum { get; set; }
 
             public string Leistung { get; set; }
 
