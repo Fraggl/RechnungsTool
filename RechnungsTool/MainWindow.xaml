@@ -60,7 +60,7 @@
                 </ItemsPanelTemplate>
             </StatusBar.ItemsPanel>
             <StatusBarItem Grid.Column="1" Grid.Row="0">
-                <TextBlock Text="Rechnungs-Tool V0.4 26.09.2015" />
+                <TextBlock Text="Rechnungs-Tool V0.4 27.09.2015" />
             </StatusBarItem>
         </StatusBar>
 
@@ -87,7 +87,8 @@
             <FlowDocument>
                 <Paragraph>
                     <Run Text="Sehr geehrte Damen und Herren,
-                         anbei die Rechnung vom XX.XX.XXX                        
+                         anbei die Rechnung für den Monat xxxxx 
+
                          Mit freundlichen Grüßen"/>
                 </Paragraph>
             </FlowDocument>
