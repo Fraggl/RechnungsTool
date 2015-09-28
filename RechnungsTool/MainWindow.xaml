@@ -37,7 +37,7 @@
             </MenuItem>
             <MenuItem Header="Einstellungen"
                       ItemContainerStyle="{StaticResource ThemeMenuItemStyle}" >
-                <MenuItem x:Name="Menu_2_Sub_Standarts" Header="Standartwerte" Click="Menu_2_Sub_Standarts_Click" />
+                <MenuItem x:Name="Menu_2_Sub_Standarts" Header="Standardwerte" Click="Menu_2_Sub_Standarts_Click" />
                 <MenuItem x:Name="Menu_2_Sub_Save" Header="Speicherort" Click="Menu_2_Sub_Save_Click" />
             </MenuItem>
             <MenuItem Header="Help" ItemsSource="{Binding Themes}" 
