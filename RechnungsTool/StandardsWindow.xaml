@@ -24,11 +24,13 @@
         <TextBox x:Name="tb_standards_receiver_zip" Margin="158.667,149.05,208.645,0" TextWrapping="Wrap" Text="Plz Stadt" Height="23" VerticalAlignment="Top"/>
         <Border BorderBrush="#FF939393" BorderThickness="1" Height="1" Margin="10,0,202.646,173.543" VerticalAlignment="Bottom"/>
         <Label x:Name="lbl_standardwerte_sender" Content="Absender" HorizontalAlignment="Left" Margin="10,0,0,128.583" VerticalAlignment="Bottom" Width="99.623"/>
-        <ComboBox x:Name="cBox_standardwerte_sender" HorizontalAlignment="Left" Margin="10,0,0,101.623" VerticalAlignment="Bottom" Width="120"/>
-        <Label x:Name="lbl_standardwerte_receiver" Content="Empfänger" Margin="182.666,0,223.023,128.583" VerticalAlignment="Bottom"/>
-        <ComboBox x:Name="cBox_standardwerte_receiver" Margin="182.666,0,202.646,101.623" VerticalAlignment="Bottom"/>
-        <Button x:Name="btn_standardwerte_removeSelSender" Content="Absender löschen" HorizontalAlignment="Left" Margin="10,0,0,40.122" VerticalAlignment="Bottom" Width="120" Height="34.749"/>
-        <Button x:Name="btn_standardwerte_removeSelReceiver" Content="Empfänger löschen" Margin="182.666,0,202.646,40.122" VerticalAlignment="Bottom" Height="34.749"/>
+        <ComboBox x:Name="cBox_standardwerte_sender" HorizontalAlignment="Left" Margin="10,0,0,101.623" VerticalAlignment="Bottom" Width="126"/>
+        <Label x:Name="lbl_standardwerte_receiver" Content="Empfänger" Margin="158.667,0,247.022,128.583" VerticalAlignment="Bottom"/>
+        <ComboBox x:Name="cBox_standardwerte_receiver" Margin="158.667,0,202.646,101.623" VerticalAlignment="Bottom"/>
+        <Button x:Name="btn_standardwerte_removeSelSender" Content="Absender löschen" HorizontalAlignment="Left" Margin="10,0,0,62.122" VerticalAlignment="Bottom" Width="126" Height="25"/>
+        <Button x:Name="btn_standardwerte_removeSelReceiver" Content="Empfänger löschen" Margin="158.667,0,202.646,62.122" VerticalAlignment="Bottom" Height="25"/>
+        <Button x:Name="btn_standardwerte_addSender" Content="Absender hinzufügen" HorizontalAlignment="Left" Margin="10,0,0,23.313" VerticalAlignment="Bottom" Width="126" Height="25" RenderTransformOrigin="0.475,2.081"/>
+        <Button x:Name="btn_standardwerte_addReceiver" Content="Empfänger hinzufügen" Margin="158.667,0,202.646,23.313" VerticalAlignment="Bottom" Height="25" RenderTransformOrigin="0.488,1.212"/>
     </Grid>
 
 </Window>

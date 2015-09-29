@@ -24,6 +24,7 @@ namespace RechnungsTool
             InitializeComponent();
         }
 
+        /*
         private void Standards_Speicherort_FileDialog_Click(object sender, RoutedEventArgs e)
         {
             // Create OpenFileDialog 
@@ -49,5 +50,6 @@ namespace RechnungsTool
                 txtbox_standards_openFilePath.Text = filename;
             }
         }
+        */
     }
 }
