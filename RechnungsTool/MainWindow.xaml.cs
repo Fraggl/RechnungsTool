@@ -161,6 +161,11 @@ namespace RechnungsTool
                 + Environment.NewLine
                 + "Folgende Positionen sind dabei angefallen:"
                 + Environment.NewLine + Environment.NewLine
+
+                // Einfügen der Liste mit Einträgen
+
+                // Berechnen der Gesamtsumme
+
                 + "Mit freundlichen Grüßen, "
                 + Environment.NewLine + Environment.NewLine
                 + "Barney Stinson";
