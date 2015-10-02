@@ -83,7 +83,7 @@
         <Label x:Name="lbl_datepicked" Content="" Margin="102,171.04,262.301,0" Grid.Row="1" VerticalAlignment="Top"/>
 
 
-        <RichTextBox x:Name="richTextBox" Margin="10,202,0,273.033" Grid.Row="1" Width="284" HorizontalAlignment="Left">
+        <RichTextBox x:Name="richTextBox" Margin="10,202,0,273.033" Grid.Row="1" Width="284" HorizontalAlignment="Left" TextChanged="richTextBox_TextChanged">
             <FlowDocument>
                 <Paragraph>
                     <Run Text="Sehr geehrte Damen und Herren,

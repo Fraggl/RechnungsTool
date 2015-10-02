@@ -33,8 +33,8 @@ namespace RechnungsTool
 
         private void LoadCfg()
         {
-            LoadReceiver();
-            LoadSender();
+            // LoadReceiver();
+            // LoadSender();
         }
 
         private void LoadReceiver()
@@ -55,7 +55,7 @@ namespace RechnungsTool
                 tb_receiver_zip.Text = Receiver.Element("Stadt").Value;
 
             }
-        }
+        } 
 
         // Test
         private void LoadSender()
@@ -161,9 +161,14 @@ namespace RechnungsTool
                 + Environment.NewLine
                 + "Folgende Positionen sind dabei angefallen:"
                 + Environment.NewLine + Environment.NewLine
+
+                // Einfügen der Liste mit Einträgen
+
+                // Berechnen der Gesamtsumme
+
                 + "Mit freundlichen Grüßen, "
                 + Environment.NewLine + Environment.NewLine
-                + "Barney Stinson";
+                + tb_sender_name.Text;
 
             // Body Formatting
             var paraFormat = new Formatting();
@@ -237,6 +242,11 @@ namespace RechnungsTool
             public int Personen { get; set; }
 
             public int Preis { get; set; }            
+        }
+
+        private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
